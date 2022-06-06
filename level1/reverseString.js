@@ -3,9 +3,19 @@
  * You're not allowed to use String.prototype.reverse().
  * Returns the new string.
  */
-function reverseString() {
+function reverseString(str) {
+   
+ 
+    if (str === "")
+      return "";
+    else
+      return reverseString(str.substr(1)) + str.charAt(0);
+ 
+   
+    }
 
-}
+    console.log(reverseString('hello'))
+
 
 describe('reverseString', function() {
   const assert = require("chai").assert;

@@ -1,7 +1,15 @@
 /**
  * Given an array of numbers, it checks whether it is sorted (in the ascending order). Returns true or false.
  */
-function isSorted() {}
+function isSorted( arr) {
+let second_index;
+	for(let first_index = 0; first_index < arr.length; first_index++){
+  	  second_index = first_index + 1;
+      if(arr[second_index] - arr[first_index] < 0) return false;
+    }
+    return true;
+}
+
 
 describe('isSorted', function() {
   const assert = require('chai').assert;

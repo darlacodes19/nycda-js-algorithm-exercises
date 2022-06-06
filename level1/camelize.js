@@ -2,8 +2,21 @@
  * Given a string, it "camelizes" by uppercasing every character at an even index, and lowercasing every character at an odd index.
  * Returns the new string.
  */
-function camelize() {
-  
+ function camelize(str) {
+
+
+  for (let i=0; i <str.length; i++) { 
+     
+     if (indexOf(str[i]) % 2 === 0) {
+         charAt(i).toUpperCase(); 
+     } else {
+         charAt(i).toLowerCase()
+     }
+
+
+  }
+
+  return;
 }
 
 describe('camelize', function() {

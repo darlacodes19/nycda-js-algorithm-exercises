@@ -1,9 +1,23 @@
 /**
  * Determines whether the given string is a palindrome, i.e. if you were to reverse the order of the characters inside the string, you would get back the original string.
  */
-function isPalindrome() {
+ 
 
-}
+  function isPalindrome(string) {
+     
+    let splitString = string.split('');
+    let reverse = splitString.reverse();
+    let joinString = reverse.join ('');
+    
+    if (string === joinString) {
+        return true
+    } else {
+        return false
+    }
+
+  
+  }
+
 
 describe('isPalindrome', function() {
   const assert = require("chai").assert;
